@@ -3,7 +3,7 @@ const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 const app = express();
 
-// Configurações do Swagger
+// Configurações do Swagger abaixo
 const swaggerOptions = {
   definition: {
     openapi: '3.0.0',
