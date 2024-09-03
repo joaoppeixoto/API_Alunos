@@ -3,7 +3,6 @@ const express = require('express');
 const swaggerUi = require('swagger-ui-express');
 const YAML = require('yamljs');
 const studentRoutes = require('./routes/studentRoutes');
-const studentController = require('../controllers/studentController.js');
 
 const app = express();
 const port = 3000;
