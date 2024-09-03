@@ -8,7 +8,7 @@ const app = express();
 const port = 3000;
 
 // Load Swagger document
-const swaggerDocument = YAML.load('./src/swagger/swagger.yaml');
+const swaggerDocument = YAML.load('./src/swagger.yaml');
 
 // Middleware
 app.use(express.json());
