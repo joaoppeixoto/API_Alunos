@@ -2,10 +2,9 @@
   "name": "generation",
   "version": "1.0.0",
   "description": "",
-  "main": "index.mjs",
-  "type": "module",
+  "main": "index.js",
   "scripts": {
-    "start": "node src/index.mjs"
+    "start": "node src/index.js"
   },
   "keywords": [],
   "author": "",
