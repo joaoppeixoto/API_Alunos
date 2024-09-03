@@ -4,6 +4,7 @@ const router = express.Router();
 const swaggerUi = require('swagger-ui-express');
 const YAML = require('yamljs');
 const studentRoutes = require('./routes/studentRoutes');
+const studentController = require('./controllers/studentController');
 
 const app = express();
 const port = 3000;
