@@ -1,13 +1,9 @@
-
 const express = require('express');
-const router = express.Router();
+const app = express();
+const port = 3000;
 const swaggerUi = require('swagger-ui-express');
 const YAML = require('yamljs');
 const studentRoutes = require('./routes/studentRoutes');
-const studentController = require('./controllers/studentController');
-
-const app = express();
-const port = 3000;
 
 // Load Swagger document
 const swaggerDocument = YAML.load('./src/swagger.yaml');
@@ -22,12 +18,6 @@ app.use('/students', studentRoutes);
 app.get('/', (_req, res) => {
   res.send('Chegando normal');
 });
-
-router.post('/', studentController.createStudent);
-router.get('/', studentController.getAllStudents);
-router.get('/:id', studentController.getStudentById);
-router.put('/:id', studentController.updateStudent);
-router.delete('/:id', studentController.deleteStudent);
 
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);

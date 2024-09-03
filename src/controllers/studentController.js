@@ -9,7 +9,7 @@ exports.createStudent = (req, res) => {
     res.status(201).json(student);
 };
 
-exports.getAllStudents = (req, res) => {
+exports.getAllStudents = (_req, res) => {
     res.status(200).json(students);
 };
 
