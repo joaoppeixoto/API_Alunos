@@ -17,6 +17,10 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 // Routes
 app.use('/students', studentRoutes);
 
+app.get('/', (req, res) => {
+  res.send('Chegando normal');
+});
+
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
