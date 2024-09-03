@@ -17,9 +17,15 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 // Routes
 app.use('/students', studentRoutes);
 
-app.get('/', (req, res) => {
+app.get('/', (_req, res) => {
   res.send('Chegando normal');
 });
+
+router.post('/', studentController.createStudent);
+router.get('/', studentController.getAllStudents);
+router.get('/:id', studentController.getStudentById);
+router.put('/:id', studentController.updateStudent);
+router.delete('/:id', studentController.deleteStudent);
 
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
